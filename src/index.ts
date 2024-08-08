@@ -27,7 +27,7 @@ async function run() {
       for (const key in json) {
         core.setOutput(key, json[key]);
       }
-    } else if (json) {
+    } else if (json != null) {
       core.setOutput("value", json);
     } else {
       core.setFailed(`can not find prop_path: ${prop_path} in json file.`);
